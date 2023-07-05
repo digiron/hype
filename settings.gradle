@@ -1,0 +1,3 @@
+rootProject.name = 'hype'
+include 'backend'
+include 'frontend'

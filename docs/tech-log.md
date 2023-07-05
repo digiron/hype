@@ -1,0 +1,15 @@
+- Using [start.spring.io](https://start.spring.io/#!type=gradle-project&language=java&platformVersion=3.1.1&packaging=jar&jvmVersion=17&groupId=com.digiron&artifactId=hype&name=hype&description=Hype%20project%20for%20coding%20exercise&packageName=com.digiron.hype&dependencies=data-rest,lombok,session,jersey,security,liquibase,mysql) to fast-track the app
+- There are a lot of "out of the box capabilties" that spring boot is providing here...
+    - General [Spring Boot Reference](https://docs.spring.io/spring-boot/docs/current/reference/html/)
+    - data-rest
+    - lombok
+    - session
+    - jersey
+    - security
+    - liquibase
+    - mysql
+- creating seperate artifact for frontend to decouple
+- using [create react app](https://legacy.reactjs.org/docs/create-a-new-react-app.html#create-react-app) for quick local development
+  - also found [this guide](https://medium.com/bb-tutorials-and-thoughts/react-local-development-with-docker-compose-5a247710f997) incredibly helpful for a quick reference on running a react app through docker-compose
+- [docker-compose ideas](https://github.com/lombocska/spring-boot-outbox-transactional-sample) w/ gradle + spring boot
+  - consider readding after https://github.com/spring-projects/spring-boot/issues/35383 is addressed?
