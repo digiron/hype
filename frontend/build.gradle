@@ -1,0 +1,21 @@
+plugins {
+    id "com.github.node-gradle.node" version "5.0.0"
+}
+
+node {
+    download = false
+}
+
+group = 'com.digiron'
+version = '0.0.1-SNAPSHOT'
+
+task npmBundle(type: NpmTask) {
+    args = ['run', 'build']
+}
+
+// resgister npm build to main build task
+allprojects {
+    task build {
+        finalizedBy(npmBundle)
+    }
+}

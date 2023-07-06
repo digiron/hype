@@ -13,3 +13,10 @@
   - also found [this guide](https://medium.com/bb-tutorials-and-thoughts/react-local-development-with-docker-compose-5a247710f997) incredibly helpful for a quick reference on running a react app through docker-compose
 - [docker-compose ideas](https://github.com/lombocska/spring-boot-outbox-transactional-sample) w/ gradle + spring boot
   - consider readding after https://github.com/spring-projects/spring-boot/issues/35383 is addressed?
+- ideas on how to combine react single page app with springboot security
+  - https://developer.okta.com/blog/2022/06/17/simple-crud-react-and-spring-boot#create-a-react-ui-with-create-react-app) 
+  - https://docs.spring.io/spring-security/reference/reactive/getting-started.html
+- following [reacts guide](https://legacy.reactjs.org/docs/create-a-new-react-app.html#more-flexible-toolchains) to bootstrapping a new app
+  - npm is... "a package runner tool that comes with npm 5.2+"
+  - "Under the hood, it uses Babel and webpack"
+  - "running npm run build will create an optimized build of your app in the build folder"
