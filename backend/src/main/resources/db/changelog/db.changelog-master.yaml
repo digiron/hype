@@ -1,0 +1,75 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: rjanusz
+      comment: adding users and roles for spring security
+      changes:
+        - createTable:
+            tableName: user
+            columns:
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: password
+                  type: varchar(250)
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  type: varchar(50)
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+        - createTable:
+            tableName: user_role
+            columns:
+              - column:
+                  name: username
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: role
+                  type: varchar(50)
+                  constraints:
+                    nullable: false
+        - addPrimaryKey:
+            constraintName: pk-user_role
+            tableName: user_role
+            columnNames: username, role
+        - addForeignKeyConstraint:
+            constraintName: fk-user_role-user
+            baseTableName: user_role
+            baseColumnNames: username
+            referencedTableName: user
+            referencedColumnNames: username
+        - addForeignKeyConstraint:
+            constraintName: fk-user_role-role
+            baseTableName: user_role
+            baseColumnNames: role
+            referencedTableName: role
+            referencedColumnNames: name
+  - changeSet:
+      id: 2
+      author: rjanusz
+      comment: adding base roles + admin user
+      changes:
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  value: "USER"
+        - insert:
+            tableName: role
+            columns:
+              - column:
+                  name: name
+                  value: "ADMIN"

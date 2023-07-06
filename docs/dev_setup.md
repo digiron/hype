@@ -24,12 +24,13 @@ _the frontend, backend, and mysql db_
 7. liquibase will run as part of spring boots lifecycle
 8. 
 
-## backend details
-
 ## frontend details
 _from the frontend directory_  
 `npm start`
 1. uses **react-scripts** to build a debuggable run a development instance of a webpack server
 2. todo: introduce storybook for local component development
 3. todo: introduce mock http responses for faster iteration on tests
-   1. spike: use contracts from java project to generate 
+   1. spike: use contracts from java project to generate
+
+## troubleshooting
+1. sticky DB? Try: ` docker compose down -v mysql-db`

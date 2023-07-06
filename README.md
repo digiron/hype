@@ -15,4 +15,6 @@ An app that lets you post your hype! What are you hyped about? Tells us now!
 ### how to run locally
 - `git clone git@github.com:digiron/hype.git`
 - install the dependencies in [dev setup](./docs/dev_setup.md)
-- `./gradlew bootRun`
+- `./gradlew build`
+- `docker compose build --no-cache`
+- `docker compose up --build`

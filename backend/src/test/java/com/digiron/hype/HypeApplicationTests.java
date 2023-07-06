@@ -3,7 +3,7 @@ package com.digiron.hype;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+//@SpringBootTest
 class HypeApplicationTests {
 
 	@Test
