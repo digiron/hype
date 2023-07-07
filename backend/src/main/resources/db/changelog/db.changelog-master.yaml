@@ -73,3 +73,20 @@ databaseChangeLog:
               - column:
                   name: name
                   value: "ROLE_ADMIN"
+  - changeSet:
+      id: 3
+      author: rjanusz
+      comment: add more columns to user table
+      changes:
+        - addColumn:
+            tableName: user
+            columns:
+              - column:
+                  name: firstname
+                  type: varchar(100)
+              - column:
+                  name: lastname
+                  type: varchar(100)
+              - column:
+                  name: email
+                  type: varchar(100)

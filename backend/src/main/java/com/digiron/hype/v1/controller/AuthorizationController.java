@@ -75,9 +75,7 @@ public class AuthorizationController {
         if (userRepository.existsByUsername(signUpRequest.getUsername())) {
             return ResponseEntity.badRequest().body("Error: Username is already taken!");
         }
-        userRepository.save(new User(signUpRequest.getUsername(),
-                encoder.encode(signUpRequest.getPassword()),
-                Set.of(roleRepository.findByName(roleUser))));
+        userRepository.save(User.from(signUpRequest, Set.of(roleRepository.findByName(roleUser)), encoder));
         return authenticateUser(signUpRequest.toLoginRequest());
     }
 }

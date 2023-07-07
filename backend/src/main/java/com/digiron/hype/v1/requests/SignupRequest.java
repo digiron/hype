@@ -15,6 +15,9 @@ public class SignupRequest {
     @NotBlank
     @Size(min = 1, max = 250)
     private String password;
+    private String firstname;
+    private String lastname;
+    private String email;
 
     public LoginRequest toLoginRequest() {
         return new LoginRequest(username, password);
