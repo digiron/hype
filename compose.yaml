@@ -10,12 +10,12 @@ services:
       - MYSQL_PORT=${MYSQL_PORT}
     ports:
       - ${MYSQL_PORT_MAP}
-#    volumes:
-#      - mysql-db:/var/lib/mysql
+    volumes:
+      - mysql-db:/var/lib/mysql
     healthcheck:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
-      timeout: 5s
-      retries: 20
+      timeout: 1s
+      retries: 40
   backend:
     build: backend
     depends_on:
@@ -32,16 +32,20 @@ services:
       spring.liquibase.user: ${LIQUIBASE_USER}
       spring.liquibase.password: ${LIQUIBASE_PASSWORD}
       server.port: ${BACKEND_PORT}
-      spring.security.user.name: ${ADMIN_USERNAME}
-      spring.security.user.password: ${ADMIN_PASSWORD}
       jwtSecret: ${JWT_SECRET}
       jwtExpirationMs: ${JWT_EXPIRATION_MS}
       jwtCookieName: ${JWT_COOKIE_NAME}
+      applicationAdminPassword: ${APPLICATION_ADMIN_PASSWORD}
+    healthcheck:
+      test: [ "CMD", "curl", "-f", "http://localhost:3000/actuator/health" ]
+      interval: 1s
+      timeout: 2s
+      retries: 60
   frontend:
     build: frontend
     depends_on:
       - backend
     ports:
       - ${FRONTEND_PORT_MAP}
-#volumes:
-#  mysql-db:
+volumes:
+  mysql-db:

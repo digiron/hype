@@ -1,4 +1,4 @@
-package com.digiron.hype.payload.responses;
+package com.digiron.hype.v1.responses;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

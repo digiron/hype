@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+//todo: convert to int id and enum for faster lookup,
+// or, make more dynamic for new role management without redeploys
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity

@@ -16,5 +16,13 @@ An app that lets you post your hype! What are you hyped about? Tells us now!
 - `git clone git@github.com:digiron/hype.git`
 - install the dependencies in [dev setup](./docs/dev_setup.md)
 - `./gradlew build`
-- `docker compose build --no-cache`
-- `docker compose up --build`
+- `docker compose build`
+- `docker compose up`
+- http://localhost:8080
+
+### dev points of interest
+#### Backend
+- [Swagger](http://localhost:3000/swagger-ui/index.html)
+  - known issue with using cookie auth for jwt tokens (can manually apply using postman)
+- [configs](http://localhost:3000/actuator/configprops)
+- [env](http://localhost:3000/actuator/env)

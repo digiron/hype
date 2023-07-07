@@ -1,18 +1,22 @@
-package com.digiron.hype.payload.requests;
+package com.digiron.hype.v1.requests;
 import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter @Setter @AllArgsConstructor @NoArgsConstructor
-public class LoginRequest {
+public class SignupRequest {
     @NotBlank
-    @NotNull
+    @Size(min = 1, max = 50)
     private String username;
 
     @NotBlank
-    @NotNull
+    @Size(min = 1, max = 250)
     private String password;
+
+    public LoginRequest toLoginRequest() {
+        return new LoginRequest(username, password);
+    }
 }

@@ -20,10 +20,13 @@
   - npm is... "a package runner tool that comes with npm 5.2+"
   - "Under the hood, it uses Babel and webpack"
   - "running npm run build will create an optimized build of your app in the build folder"
-- help regarding liquibase
-  - https://contribute.liquibase.com/extensions-integrations/directory/integration-docs/springboot/springboot/
-  - https://gist.github.com/wwerner/d6cd9688cb2f5738ccd6b2e72dca8bfa
+- liquibase
+  - [migrate via springboot](https://contribute.liquibase.com/extensions-integrations/directory/integration-docs/springboot/springboot/)
+  - [springboot user migration example](https://gist.github.com/wwerner/d6cd9688cb2f5738ccd6b2e72dca8bfa)
 - regarding spring security and protected endpoints
-  - https://www.codejava.net/frameworks/spring-boot/spring-boot-security-role-based-authorization-tutorial
-  - https://www.bezkoder.com/spring-boot-jwt-authentication/
-  - https://www.bezkoder.com/react-login-example-jwt-hooks/
+  - using [spring security] (https://www.codejava.net/frameworks/spring-boot/spring-boot-security-role-based-authorization-tutorial) for enpoint authorization
+  - [getting jwt tokens](https://www.bezkoder.com/spring-boot-jwt-authentication/) for session based browser enabled api authorization
+- [swagger time](https://www.baeldung.com/spring-rest-openapi-documentation)
+- [spring security principles](https://spring.io/guides/topicals/spring-security-architecture/)
+- hooking up an [authenticated frontent](https://www.bezkoder.com/react-login-example-jwt-hooks/)
+- [actuators](https://docs.spring.io/spring-boot/docs/3.1.1/actuator-api/htmlsingle/#overview)

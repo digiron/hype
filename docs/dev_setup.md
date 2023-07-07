@@ -33,4 +33,20 @@ _from the frontend directory_
    1. spike: use contracts from java project to generate
 
 ## troubleshooting
-1. sticky DB? Try: ` docker compose down -v mysql-db`
+- sticky DB? Try: 
+  - `docker compose down -v mysql-db`
+  - `docker volume ls` ensure its gone
+- for the freshest of builds (_from project root_)
+ ```shell
+docker compose down -v mysql-db
+.\gradlew build   
+docker compose build --no-cache
+docker compose up --force-recreate
+```
+- a little bit faster now
+ ```shell
+.\gradlew build   
+docker compose build
+docker compose up
+
+```

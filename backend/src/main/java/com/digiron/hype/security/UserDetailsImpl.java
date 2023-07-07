@@ -2,6 +2,7 @@ package com.digiron.hype.security;
 
 import com.digiron.hype.data.model.Role;
 import com.digiron.hype.data.model.User;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -11,6 +12,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
+@Slf4j
 public class UserDetailsImpl implements UserDetails {
     private User user;
 
@@ -25,8 +27,8 @@ public class UserDetailsImpl implements UserDetails {
 
         for (Role role : roles) {
             authorities.add(new SimpleGrantedAuthority(role.getName()));
+            log.info("added role {}", role.getName());
         }
-
         return authorities;
     }
 
