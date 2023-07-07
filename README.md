@@ -17,8 +17,8 @@ An app that lets you post your hype! What are you hyped about? Tells us now!
 - install the dependencies in [dev setup](./docs/dev_setup.md)
 - `./gradlew build`
 - `docker compose build`
-- `docker compose up`
-- http://localhost:8080
+- `docker compose up -d`
+- http://localhost:80
 
 ### dev points of interest
 #### Backend

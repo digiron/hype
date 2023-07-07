@@ -8,18 +8,13 @@
     - security
     - liquibase
     - mysql
-- creating seperate artifact for frontend to decouple
-- using [create react app](https://legacy.reactjs.org/docs/create-a-new-react-app.html#create-react-app) for quick local development
+- creating separate artifact for frontend to decouple
   - also found [this guide](https://medium.com/bb-tutorials-and-thoughts/react-local-development-with-docker-compose-5a247710f997) incredibly helpful for a quick reference on running a react app through docker-compose
 - [docker-compose ideas](https://github.com/lombocska/spring-boot-outbox-transactional-sample) w/ gradle + spring boot
   - consider readding after https://github.com/spring-projects/spring-boot/issues/35383 is addressed?
 - ideas on how to combine react single page app with springboot security
   - https://developer.okta.com/blog/2022/06/17/simple-crud-react-and-spring-boot#create-a-react-ui-with-create-react-app) 
   - https://docs.spring.io/spring-security/reference/reactive/getting-started.html
-- following [reacts guide](https://legacy.reactjs.org/docs/create-a-new-react-app.html#more-flexible-toolchains) to bootstrapping a new app
-  - npm is... "a package runner tool that comes with npm 5.2+"
-  - "Under the hood, it uses Babel and webpack"
-  - "running npm run build will create an optimized build of your app in the build folder"
 - liquibase
   - [migrate via springboot](https://contribute.liquibase.com/extensions-integrations/directory/integration-docs/springboot/springboot/)
   - [springboot user migration example](https://gist.github.com/wwerner/d6cd9688cb2f5738ccd6b2e72dca8bfa)
@@ -28,5 +23,8 @@
   - [getting jwt tokens](https://www.bezkoder.com/spring-boot-jwt-authentication/) for session based browser enabled api authorization
 - [swagger time](https://www.baeldung.com/spring-rest-openapi-documentation)
 - [spring security principles](https://spring.io/guides/topicals/spring-security-architecture/)
-- hooking up an [authenticated frontent](https://www.bezkoder.com/react-login-example-jwt-hooks/)
 - [actuators](https://docs.spring.io/spring-boot/docs/3.1.1/actuator-api/htmlsingle/#overview)
+- frontend time
+  - hooking up an [authenticated frontent](https://jasonwatmore.com/post/2022/06/15/react-18-redux-jwt-authentication-example-tutorial)
+  - frontend form validation library [yup](https://www.npmjs.com/package/yup)
+  - https://redux.js.org/tutorials/essentials/part-2-app-structure

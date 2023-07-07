@@ -1,13 +1,11 @@
 package com.digiron.hype.v1.controller;
 
 import com.digiron.hype.data.model.User;
-import com.digiron.hype.data.repository.RoleRepository;
 import com.digiron.hype.data.repository.UserRepository;
 import jakarta.validation.constraints.NotNull;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins="http://localhost", exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
+@CrossOrigin
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/v1")

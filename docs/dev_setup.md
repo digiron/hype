@@ -21,8 +21,7 @@ _the frontend, backend, and mysql db_
    1. has the config for bundling a single page react app using **react-scripts** which uses webpack for building the artifact
 5. the file `compose.yaml`, will bring up a mysql image first, then start the **backend** and **frontend** artifacts
 6. it will use the `.env` file for values when starting containers. It currently has values set for a local dev env.
-7. liquibase will run as part of spring boots lifecycle
-8. 
+7. liquibase will run as part of spring boots lifecycle 
 
 ## frontend details
 _from the frontend directory_  

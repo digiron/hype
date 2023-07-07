@@ -25,7 +25,8 @@ import java.util.Set;
 
 import static org.springframework.http.HttpHeaders.SET_COOKIE;
 
-@CrossOrigin(origins = "*", maxAge = 3600)
+@CrossOrigin
+//@CrossOrigin(origins="http://localhost", exposedHeaders = {"Access-Control-Allow-Origin","Access-Control-Allow-Credentials"})
 @RestController
 @RequestMapping("/v1/auth")
 @RequiredArgsConstructor
